@@ -1,3 +1,2 @@
-### This page is under construction !!!
-## see you soon !!
-# Nahid Hasan Badhan
+# This page is under construction !!! 
+## See you soon!
