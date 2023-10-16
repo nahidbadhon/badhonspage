@@ -2,88 +2,188 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #39383866;
-            color: #a81515;
-            text-align: center;
-            padding: 20px;
-            position:static; /* Add position:relative to the header */
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-        }
-        /* Style for the logo image */
-        .logo-container {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 100px; /* Adjust the size of the circular container */
-            height: 100px; /* Should be equal to the width to create a circle */
-            border-radius: 50%; /* Makes the container circular */
-            overflow: hidden; /* Ensures the image stays within the circular container */
-        }
-        /* Style for the logo image */
-        .logo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Helps maintain the aspect ratio of the image */
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
+    <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/small_icon.jpg" type="image/x-jpg">
+    <title>Nahid's Page</title>
 </head>
-<body>
-     <h3 align="center">Message from page owner</h3>
-    <h1 align="center">This page is under construction!</h1>
-    <h2 align="center">See you soon!!</h2>
-    <!-- <header>
-        <div class="logo-container">
-            <img src="logo.jpg" alt="Your Name's Picture" class="logo">
-         </div>
-        <h1>Nahid Badhan</h1>
-        <p><h1>Welcome to Nahid Badhan</h1></p>
-    </header>
-    <div class="container">
-        <h2>About Me</h2>
-        <p>
-            Hello, I'm Nahid Badhan. This is my personal web page. Currently I am working on Design Engineering project. I hope, I will have some good output.
-        </p>
-        
-        <h2>Hobby</h2>
-        <ul>
-            <li>Swimming</li>
-            <li>Movie</li>
-            <li>Guitar</li>
+<body oncontextmenu="return false">
+
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
+
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"><i class="fab fa-node-js"></i> Nahid</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Hi There,<br/> I am Nahid Hasan<span> Badhan</span></h2>
+    <p>STUDENT</p> 
+    <!-- add skills after student use this <span class="typing-text"></span> -->
+    <a href="#about" class="btn"><span>Connect Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/nahid-hasan-badhan-ab1287271/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/nahidbadhon" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/NahidBadhan" target="_blank"><i class="fab fa-twitter"></i></a></li>
         </ul>
-        
-        <h2>Contact Me</h2>
-        <p>
-            <a href="mailto:youremail@example.com">badhonhasanhasan@gmail.com</a>
-        </p>
+      </div>
     </div>
-    <footer>
-        &copy; 2023 Nahid Badhan. All rights reserved.
-    </footer> -->
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/profile_photo.jpg" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/about.jpeg" alt="">
+    </div>
+    <div class="content">
+        <h3>I am Badhan</h3>
+        <span class="tag">Designer & Engineer</span>
+        
+        <p>I have completed my graduation in computer science in UESTC.Currently I am pursuing Masters in Industrial Design Engineering in ZJU.I made the study major changed because I feel that most of the current designs are IT based. As i have computer Science knowledge, I can feel that I will able to work on current design industry.</p>
+        
+        <div class="box-container">
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- skills section starts -->
+<section class="skills" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills</h2>
+
+    <div class="container">
+          <div class="row" id="skillsContainer">
+
+            <div class="bar">
+              <div class="info">
+                <span>Python</span>
+              </div>
+            </div>
+
+            <div class="bar">
+              <div class="info">
+                <span>Web Development</span>
+              </div>
+
+            </div>
+
+      </div>
+</div>
+</section>
+<!-- skills section ends -->
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <p class="qoute">Education is the backbone of the nation</p>
+
+    <div class="box-container">
+
+    <div class="box">
+        <div class="image">
+        <img draggable="false" src="./assets/images/educat/zju.svg.png" alt="">
+        </div>
+        <div class="content">
+        <h3>Industrial Design Engineering</h3>
+        <p>Zhejiang University</p>
+        <h4>2023 - Current </h4>
+        </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+      <img draggable="false" src="./assets/images/educat/uestc.png" alt="">
+      </div>
+      <div class="content">
+      <h3>Bachelor of Computer Science</h3>
+      <p>University of Electronic Science and Technology of China</p>
+      <h4>2019 - 2023</h4>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+      <img draggable="false" src="./assets/images/educat/bmarpc.png" alt="">
+      </div>
+      <div class="content">
+      <h3>Senior High School | Science</h3>
+      <p>Birshreshtha Munshi Abdur Rouf Public College</p>
+      <h4>2016 - 2018</h4>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+      <img draggable="false" src="./assets/images/educat/bbb.png" alt="">
+      </div>
+      <div class="content">
+      <h3>High School | Science</h3>
+      <p>Bindu Basini Govt. Boys' High School</p>
+      <h4>2012 - 2016</h4>
+      </div>
+    </div>
+
+    
+
+</div>
+</section>
+<!-- education section ends -->
+
+
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+  
+  <h2 class="heading"><i class="fas fa-headset"></i><span>Contact</span></h2>
+  <br>
+  <br>
+  <br>
+   <h2 align="center"> Email: badhonhasanhasan@gmail.com</h2>
+</section>
 </body>
 </html>
