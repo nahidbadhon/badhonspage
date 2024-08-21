@@ -2,11 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { env } = require('process');
 require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
-const PORT = process.env.PORT || env.MONGODB_URI;
+const PORT = process.env.PORT || 5000;
 
 // Middleware setup
 app.use(cors());
@@ -79,5 +78,4 @@ app.post('/comments/:id/reply', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
-
 
