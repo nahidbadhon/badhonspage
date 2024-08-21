@@ -122,6 +122,57 @@
             </tr> 
 
          </tbody>
-    </table>      
+    </table>  
+    
+    <div id="comment-section">
+        <h3>Leave a Comment</h3>
+        <form id="commentForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Your Comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <h3>Comments</h3>
+        <div id="comments-container"></div>
+    </div>
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+
+            fetch('http://localhost:5000/addComment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, comment })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Comment added!');
+                document.getElementById('commentForm').reset();
+                loadComments();
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        function loadComments() {
+            fetch('http://localhost:5000/comments')
+                .then(response => response.json())
+                .then(comments => {
+                    const commentsContainer = document.getElementById('comments-container');
+                    commentsContainer.innerHTML = '';
+                    comments.forEach(comment => {
+                        const commentElement = document.createElement('div');
+                        commentElement.innerHTML = `<strong>${comment.name}</strong>: ${comment.comment}`;
+                        commentsContainer.appendChild(commentElement);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        window.onload = loadComments;
+    </script>
 </body>
 </html>
