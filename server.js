@@ -40,14 +40,17 @@ const Comment = mongoose.model('Comment', commentSchema);
 
 // Add a new comment
 app.post('/comments', async (req, res) => {
+    console.log('New comment received:', req.body);
     const newComment = new Comment(req.body);
     try {
         await newComment.save();
         res.status(201).json(newComment);
     } catch (err) {
+        console.error('Error saving comment:', err.message);
         res.status(400).json({ message: err.message });
     }
 });
+
 
 // Get all comments
 app.get('/comments', async (req, res) => {
@@ -78,3 +81,5 @@ app.post('/comments/:id/reply', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+
