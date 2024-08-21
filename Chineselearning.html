@@ -165,7 +165,7 @@
             </tr> 
             <tr class = "hightlight-row" >
                 <td>2024-08-21</td>
-                <td>-------------</td>
+                <td>------------</td>
                 <td></td>
                 <td></td>
             </tr> 
@@ -187,7 +187,7 @@
 
     <script>
         async function loadComments() {
-            const response = await fetch('mongodb+srv://badhonhasanhasan:TASJU5HUR55RlHZY@rapid.xo9j9.mongodb.net/?retryWrites=true&w=majority&appName=rapid');
+            const response = await fetch('http://localhost:5000/comments');
             const comments = await response.json();
             const commentsList = document.getElementById('commentsList');
             commentsList.innerHTML = comments.map(comment => `
@@ -218,7 +218,7 @@
                     const username = form.querySelector('input').value;
                     const text = form.querySelector('textarea').value;
 
-                    const response = await fetch(`mongodb+srv://badhonhasanhasan:TASJU5HUR55RlHZY@rapid.xo9j9.mongodb.net/?retryWrites=true&w=majority&appName=rapid`, {
+                    const response = await fetch(`http://localhost:5000/comments/${id}/reply`, {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -238,7 +238,7 @@
             const username = document.getElementById('username').value;
             const text = document.getElementById('commentText').value;
 
-            const response = await fetch('mongodb+srv://badhonhasanhasan:TASJU5HUR55RlHZY@rapid.xo9j9.mongodb.net/?retryWrites=true&w=majority&appName=rapid', {
+            const response = await fetch('http://localhost:5000/comments', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -254,7 +254,6 @@
         });
 
         loadComments();
-        
     </script>     
     
 </body>
