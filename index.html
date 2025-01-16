@@ -13,6 +13,100 @@
     <!-- Favicon -->
     <link id='favicon' rel="shortcut icon" href="./assets/images/small_icon.jpg" type="image/x-jpg">
     <title>Nahid's Page</title>
+    <style>
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            padding: 5px;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .language-selector select {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .language-selector select:hover {
+            background-color: #45a049;
+        }
+        .navbar {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .navbar ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .navbar ul li {
+            margin: 0 10px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-menu a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-menu a:hover {
+            background-color: #ddd;
+        }
+        .dropdown-toggle {
+            display: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+            }
+            .dropdown-toggle {
+                display: block;
+            }
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .scroll-to-top:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body oncontextmenu="return false">
 
@@ -20,7 +114,9 @@
 <header>
         <a href="/" class="logo"><i class="fab fa-node-js"></i> Nahid</a>
 
-        <div id="menu" class="fas fa-bars"></div>
+        <div class="dropdown-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
         <nav class="navbar">
             <ul>
             <li><a class="active" href="#home" data-translate="navbarHome">Home</a></li>
@@ -30,6 +126,14 @@
             <li><a href="#contact" data-translate="navbarContact">Contact</a></li>
             <li><a href="Chineselearning.html" data-translate="navbarExtra">Extra</a></li>
             </ul>
+            <div class="dropdown-menu">
+                <a href="#home" data-translate="navbarHome">Home</a>
+                <a href="#about" data-translate="navbarAbout">About</a>
+                <a href="#skills" data-translate="navbarSkills">Skills</a>
+                <a href="#education" data-translate="navbarEducation">Education</a>
+                <a href="#contact" data-translate="navbarContact">Contact</a>
+                <a href="Chineselearning.html" data-translate="navbarExtra">Extra</a>
+            </div>
         </nav>
         <div class="language-selector">
             <select id="language-dropdown">
@@ -248,17 +352,24 @@
 </section>
 </section>
 
+<!-- Scroll to top button -->
+<button class="scroll-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
 <script src="languages.js"></script>
 <script src="script.js"></script>
 <script src="translations.js"></script>
 
-</body>
-</html>
+<script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-
-<script src="languages.js"></script>
-<script src="script.js"></script>
-<script src="translations.js"></script> <!-- Add this line to include translations -->
+    document.querySelector('.dropdown-toggle').addEventListener('click', () => {
+        document.querySelector('.dropdown-menu').classList.toggle('show');
+    });
+</script>
 
 </body>
 </html>
