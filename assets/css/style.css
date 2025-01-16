@@ -190,6 +190,17 @@ header .navbar ul li a:hover {
   header .navbar.nav-toggle {
     right: 0;
   }
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar ul.show {
+    display: flex;
+  }
+  .dropdown-toggle {
+    display: block;
+  }
 }
 /* hamburger icon ends */
 
@@ -708,4 +719,9 @@ header .navbar ul li a:hover {
   .text-area textarea {
     width: 80%;
   }
+}
+
+/* Ensure the navbar content is visible by adjusting the CSS for the dropdown menu */
+.dropdown-menu.show {
+  display: block;
 }

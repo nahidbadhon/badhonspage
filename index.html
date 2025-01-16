@@ -108,7 +108,7 @@
         }
     </style>
 </head>
-<body oncontextmenu="return false">
+<body oncontextmenu="return false" class="desktop-view">
 
 <!-- navbar starts -->
 <header>
@@ -368,6 +368,16 @@
 
     document.querySelector('.dropdown-toggle').addEventListener('click', () => {
         document.querySelector('.dropdown-menu').classList.toggle('show');
+    });
+
+    document.querySelector('.dropdown-toggle').addEventListener('click', () => {
+        const navbar = document.querySelector('.navbar ul');
+        if (navbar.style.display === 'flex' || navbar.style.display === '') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'flex';
+            navbar.style.flexDirection = 'column';
+        }
     });
 </script>
 
