@@ -145,3 +145,22 @@ const inputChars = document.querySelector("#input-chars");
 inputTextElem.addEventListener("input", (e) => {
   inputChars.innerHTML = inputTextElem.value.length;
 });
+
+function adjustView() {
+  if (window.innerWidth <= 768) {
+    // Adjustments for mobile view
+    document.body.classList.add("mobile-view");
+    document.body.classList.remove("tablet-view", "desktop-view");
+  } else if (window.innerWidth <= 1024) {
+    // Adjustments for tablet view
+    document.body.classList.add("tablet-view");
+    document.body.classList.remove("mobile-view", "desktop-view");
+  } else {
+    // Adjustments for desktop view
+    document.body.classList.add("desktop-view");
+    document.body.classList.remove("mobile-view", "tablet-view");
+  }
+}
+
+window.addEventListener("resize", adjustView);
+window.addEventListener("load", adjustView);

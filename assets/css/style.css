@@ -21,6 +21,21 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+body.mobile-view {
+  /* Styles for mobile view */
+  font-size: 1.4rem;
+}
+
+body.tablet-view {
+  /* Styles for tablet view */
+  font-size: 1.6rem;
+}
+
+body.desktop-view {
+  /* Styles for desktop view */
+  font-size: 1.8rem;
+}
+
 *::selection {
   background: #2b3dda;
   color: #fff;
@@ -663,4 +678,34 @@ header .navbar ul li a:hover {
   background: linear-gradient(to right, blue, yellow);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .card {
+    margin: 1rem 0;
+  }
+  .dropdown-container {
+    width: 100%;
+  }
+  .text-area textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 2rem;
+  }
+  .card {
+    margin: 2rem 0;
+  }
+  .dropdown-container {
+    width: 80%;
+  }
+  .text-area textarea {
+    width: 80%;
+  }
 }
