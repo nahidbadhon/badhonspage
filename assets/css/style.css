@@ -657,3 +657,10 @@ header .navbar ul li a:hover {
   top: calc(100% - 12rem);
 }
 /* scroll top ends */
+.email-link {
+  text-transform: lowercase;
+  text-decoration: none;
+  background: linear-gradient(to right, blue, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
