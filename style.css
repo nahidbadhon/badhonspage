@@ -325,6 +325,55 @@ body.dark {
   height: 20px;
 }
 
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: var(--light-bg-color);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.skills-container h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.skill-item {
+  background-color: var(--bg-color);
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item ion-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.skill-item span {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
 /* media queries */
 @media (max-width: 800px) {
   .container {
