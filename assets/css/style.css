@@ -41,10 +41,6 @@ body.desktop-view {
   color: #fff;
 }
 
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
 html::-webkit-scrollbar {
   width: 0.8rem;
 }
@@ -399,7 +395,6 @@ header .navbar ul li a:hover {
   }
 }
 
-
 /* breaking news section end */
 
 /* about section starts */
@@ -476,22 +471,6 @@ header .navbar ul li a:hover {
   box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
 }
-/* .resumebtn .btn span {
-  font-weight: 600;
-  font-size: 1.8rem;
-  letter-spacing: 0.1rem;
-}
-.resumebtn .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
-.resumebtn .btn:hover {
-  background: #1a047e;
-}
-.resumebtn .btn:hover i {
-  transform: translateX(5px);
-} */
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
   .about .row .image {
@@ -515,103 +494,72 @@ header .navbar ul li a:hover {
 }
 /* about media queries ends*/
 /* about section ends */
-
-/* skills section starts */
+/* Skills Section */
 .skills {
-  background: linear-gradient(to bottom, #57059e, #4a00e0);
-  padding: 4rem 0;
+  padding: 4rem 9%;
+  background: #f7f7f7;
 }
 
 .skills .heading {
   text-align: center;
-  color: #fff;
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color: #333;
   margin-bottom: 2rem;
 }
 
-.skills .container {
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 0 2rem;
+  padding: 2rem 0;
 }
 
-.skills .card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
+.skill-card {
+  background: white;
   padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.skills .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+.skill-card:hover {
+  transform: translateY(-5px);
 }
 
-.skills .card h3 {
-  color: #fff;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.skills .card .bar {
-  background: rgba(0, 0, 22, 0.4);
-  border-radius: 1rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  transition: background 0.3s ease;
-}
-
-.skills .card .bar:hover {
-  background: rgba(0, 0, 22, 0.6);
-}
-
-.skills .card .bar .info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.skills .card .bar .info span {
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-
-/* skills section ends */
-
-/* skills section starts */
-.skills {
-  background: #f7f7f7;
-  padding: 4rem 0;
-}
-
-.skills .heading {
-  text-align: center;
-  color: #333;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.skill-category {
-  margin-bottom: 2rem;
-}
-
-.skill-category h3 {
-  font-size: 2rem;
+.skill-card h3 {
   color: #4CAF50;
   margin-bottom: 1rem;
 }
 
-.skill-category p {
-  font-size: 1.6rem;
-  color: #555;
-  line-height: 1.5;
+.skill-card ul {
+  padding-left: 1.5rem;
 }
 
-/* skills section ends */
+.skill-card li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+      padding: 1.5rem;
+  }
+
+  .skill-card h3 {
+      font-size: 1.5rem;
+  }
+
+  .skill-card li {
+      font-size: 1rem;
+  }
+}
 /* education section starts */
 .education {
   background: #e5ecfb;
