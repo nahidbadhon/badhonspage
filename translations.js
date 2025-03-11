@@ -41,7 +41,7 @@ const translations = {
     aboutMeTitle: "关于 <span>我</span>",
     aboutMeContent: "我是 Badhan",
     aboutMeTag: "设计师 & 工程师",
-    aboutMeDescription: "我已在电子科技大学完成计算机科学专业毕业，目前在浙江大学攻读工业设计工程硕士学位。CST 给了我飞翔的翅膀。",
+    aboutMeDescription: "我已在电子科技大学完成计算机科学专业毕业，目前在浙江大学攻读工业设计工程硕士学位. CST 给了我飞翔的翅膀。",
     skillsTitle: "技术技能",
     educationTitle: "我的 <span>教育</span>",
     educationQuote: "教育是国家的支柱",
